@@ -1,12 +1,62 @@
 [
     {
-        "name": "Penny",
-        "age": "25",
-        "likes": "Daffodils"
+        "name": "Abigail",
+        "bday": "Fall 13",
+        "loves": "Amethyst"
     },
     {
-        "name": "Abigail",
-        "age": "22",
-        "likes": "Amethyst"
+        "name": "Alex",
+        "bday": "Summer 13",
+        "loves": "Amethyst"
+    },
+    {
+        "name": "Elliot",
+        "bday": "Fall 5",
+        "loves": "Duck Feather"
+    },
+    {
+        "name": "Emily",
+        "bday": "Spring 27",
+        "loves": "Wool"
+    },
+    {
+        "name": "Haley",
+        "bday": "Spring 14",
+        "loves": "Pink Cake"
+    },
+    {
+        "name": "Harvey",
+        "bday": "Winter 14",
+        "loves": "Coffee"
+    },
+    {
+        "name": "Leah",
+        "bday": "Winter 23",
+        "loves": "Truffle"
+    },
+    {
+        "name": "Maru",
+        "bday": "Summer 10",
+        "loves": "Battery Pack"
+    },
+    {
+        "name": "Penny",
+        "bday": "Fall 2",
+        "loves": "Poppy"
+    },
+    {
+        "name": "Sam",
+        "bday": "Summer 17",
+        "loves": "Tigerseye"
+    },
+    {
+        "name": "Sebastian",
+        "bday": "Winter 10",
+        "loves": "Frozen  Tear"
+    },
+    {
+        "name": "Shane",
+        "bday": "Spring 20",
+        "loves": "Hot Pepper"
     }
 ]
