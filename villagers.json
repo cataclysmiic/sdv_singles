@@ -1,5 +1,12 @@
-{
-    "name": "Penny",
-    "age": "25",
-    "likes": "Daffodils"
-}
+[
+    {
+        "name": "Penny",
+        "age": "25",
+        "likes": "Daffodils"
+    },
+    {
+        "name": "Abigail",
+        "age": "22",
+        "likes": "Amethyst"
+    }
+]
