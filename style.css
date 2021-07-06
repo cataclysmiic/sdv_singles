@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Las Enter';
+    src: url('fonts/lasenterpersonaluseonly-d301-webfont.woff2') format('woff2'),
+    url('fonts/lasenterpersonaluseonly-d301-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'SDV Regular';
+    src: url('fonts/stardew_valley_all_caps-webfont.woff2') format('woff2'),
+    url('fonts/stardew_valley_all_caps-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: "Stardew Valley Regular";
+    src: url("fonts/stardew_valley-webfont.woff") format("woff"),
+         url("fonts/stardew_valley-webfont.woff2") format("woff2");
+}
+.navbar {
+    background: #1B1725;
+}
+.brand {    
+    max-height: 40px;
+    filter: drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
+            drop-shadow(0 0 4px rgba(245, 177, 198, 0.5))
+            drop-shadow(0 0 6px rgba(245, 177, 198, 0.5))
+            drop-shadow(0 0 10px rgba(234, 99, 140, 0.5))
+            drop-shadow(0 0 20px rgba(234, 99, 140, 0.5))
+            drop-shadow(0 0 40px rgba(234, 99, 140, 0.5))
+            drop-shadow(0 0 60px rgba(234, 99, 140, 0.5))
+            drop-shadow(0 0 80px rgba(187, 79, 112, 0.5))
+            drop-shadow(0 0 100px rgba(187, 79, 112, 0.5));
+    display: inline-block;
+    animation: brand 2s ease-in-out infinite alternate;
+}
+@keyframes brand {
+    0%, 12%, 32%, 72%, 100% {filter:
+        drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 4px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 6px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 10px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 20px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 40px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 60px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 80px rgba(187, 79, 112, 0.5))
+        drop-shadow(0 0 100px rgba(187, 79, 112, 0.5));}
+    10% {filter:
+        drop-shadow(0 0 1px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 3px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 8px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 15px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 35px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 55px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 75px rgba(187, 79, 112, 0.5))
+        drop-shadow(0 0 95px rgba(187, 79, 112, 0.5));}
+    30% {filter:
+        drop-shadow(0 0 1px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 3px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 8px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 15px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 35px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 55px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 75px rgba(187, 79, 112, 0.5))
+        drop-shadow(0 0 95px rgba(187, 79, 112, 0.5));}
+    70% {filter:
+        drop-shadow(0 0 1px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 3px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 8px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 15px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 35px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 55px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 75px rgba(187, 79, 112, 0.5))
+        drop-shadow(0 0 95px rgba(187, 79, 112, 0.5));}
+}
+.jumbotron {
+    /* background: linear-gradient(rgba(148, 201, 169, 0.4), rgba(234, 99, 140, 0.4)),
+                url('img/sdv_night.png') 50% 70%; */
+    background: linear-gradient(rgba(25, 14, 79, 0.5), rgba(179, 60, 134, 0.5)),
+                url('img/sdv_morning.png');
+}
+.sdv {
+    font-family: "SDV Regular", sans-serif;
+    color: #fdeff4;
+    letter-spacing: 2px;
+}
+.neon {
+    font-family: "Las Enter", sans-serif;
+    color: #fdeff4;
+    font-size: 6rem;
+    display: inline-block;
+    animation: neon 2s ease-in-out infinite alternate;
+}
+@keyframes neon {
+    0%, 12%, 32%, 72%, 100% {text-shadow:
+        0px 0px 2px #f5b1c6,
+        0px 0px 4px #f5b1c6,
+        0px 0px 6px #f5b1c6,
+        0px 0px 10px #ea638c,
+        0px 0px 20px #ea638c,
+        0px 0px 40px #ea638c,
+        0px 0px 60px #ea638c,
+        0px 0px 80px #bb4f70,
+        0px 0px 100px #bb4f70;}
+    10% {text-shadow:
+        0px 0px 1px #f5b1c6,
+        0px 0px 2px #f5b1c6,
+        0px 0px 3px #f5b1c6,
+        0px 0px 8px #ea638c,
+        0px 0px 15px #ea638c,
+        0px 0px 35px #ea638c,
+        0px 0px 55px #ea638c,
+        0px 0px 75px #bb4f70,
+        0px 0px 95px #bb4f70;}
+    30% {text-shadow:
+        0px 0px 1px #f5b1c6,
+        0px 0px 2px #f5b1c6,
+        0px 0px 3px #f5b1c6,
+        0px 0px 8px #ea638c,
+        0px 0px 15px #ea638c,
+        0px 0px 35px #ea638c,
+        0px 0px 55px #ea638c,
+        0px 0px 75px #bb4f70,
+        0px 0px 95px #bb4f70;}
+    70% {text-shadow:
+        0px 0px 1px #f5b1c6,
+        0px 0px 2px #f5b1c6,
+        0px 0px 3px #f5b1c6,
+        0px 0px 8px #ea638c,
+        0px 0px 15px #ea638c,
+        0px 0px 35px #ea638c,
+        0px 0px 55px #ea638c,
+        0px 0px 75px #bb4f70,
+        0px 0px 95px #bb4f70;}
+}
