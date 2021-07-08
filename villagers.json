@@ -2,61 +2,109 @@
     {
         "name": "Abigail",
         "bday": "Fall 13",
-        "loves": "Amethyst"
+        "quote": "Wow, I just realized it's Friday. Sometimes I totally lose track of time.",
+        "loves": "Amethyst",
+        "likes": "Quartz",
+        "dislikes": "Sugar",
+        "hates": "Holly"
     },
     {
         "name": "Alex",
         "bday": "Summer 13",
-        "loves": "Complete Breakfast"
+        "quote": "My Grandma told me I should spend more time studying. Maybe she's right...",
+        "loves": "Complete Breakfast",
+        "likes": "Duck Egg",
+        "dislikes": "Salmonberry",
+        "hates": "Slime Egg"
     },
     {
         "name": "Elliot",
         "bday": "Fall 5",
-        "loves": "Duck Feather"
+        "quote": "I'm Elliott... I live in the little cabin by the beach. It's a pleasure to meet you.",
+        "loves": "Duck Feather",
+        "likes": "Squid",
+        "dislikes": "Snow Yam",
+        "hates": "Amaranth"
     },
     {
         "name": "Emily",
         "bday": "Spring 27",
-        "loves": "Wool"
+        "quote": "I have a secret hobby, but I won't say any more. Maybe I'll show you some day.",
+        "loves": "Wool",
+        "likes": "Daffodil",
+        "dislikes": "Rice Pudding",
+        "hates": "Fish Taco"
     },
     {
         "name": "Haley",
         "bday": "Spring 14",
-        "loves": "Pink Cake"
+        "quote": "The only thing I like about this town is the beach.",
+        "loves": "Pink Cake",
+        "likes": "Maple Syrup",
+        "dislikes": "Ginger",
+        "hates": "Wild Horseradish"
     },
     {
         "name": "Harvey",
         "bday": "Winter 14",
-        "loves": "Coffee"
+        "quote": "It's a lot of work, being a doctor. I don't eat as well as I should. If I didn't live alone I think it would be easier.",
+        "loves": "Coffee",
+        "likes": "Spring Onion",
+        "dislikes": "Blueberry Tart",
+        "hates": "Coral"
     },
     {
         "name": "Leah",
         "bday": "Winter 23",
-        "loves": "Truffle"
+        "quote": "We wouldn't be able to survive without nature. It's good to remember that.",
+        "loves": "Truffle",
+        "likes": "Earth Crystal",
+        "dislikes": "Seaweed",
+        "hates": "Oil of Garlic"
     },
     {
         "name": "Maru",
         "bday": "Summer 10",
-        "loves": "Battery Pack"
+        "quote": "Some day I'm going to be a world-class inventor. You're lucky to be friends with me! ...just kidding.",
+        "loves": "Battery Pack",
+        "likes": "Copper Bar",
+        "dislikes": "Crystal Fruit",
+        "hates": "Pickles"
     },
     {
         "name": "Penny",
         "bday": "Fall 2",
-        "loves": "Poppy"
+        "quote": "When you're lost in a book, it's easy to forget the realities of your life. ...Maybe that's why I like reading so much.",
+        "loves": "Poppy",
+        "likes": "Chicken Statue",
+        "dislikes": "Algae Soup",
+        "hates": "Beer"
     },
     {
         "name": "Sam",
         "bday": "Summer 17",
-        "loves": "Tigerseye"
+        "quote": "Last night I practiced guitar for 4 hours straight. My fingers hurt like crazy.",
+        "loves": "Tigerseye",
+        "likes": "Joja Cola",
+        "dislikes": "Field Snack",
+        "hates": "Mayonnaise"
     },
     {
         "name": "Sebastian",
         "bday": "Winter 10",
-        "loves": "Frozen  Tear"
+        "quote": "I was thinking... people are like stones skipping over the water. Eventually we're going to sink.",
+        "loves": "Frozen  Tear",
+        "likes": "Flounder",
+        "dislikes": "Geode",
+        "hates": "Clay"
     },
     {
         "name": "Shane",
         "bday": "Spring 20",
-        "loves": "Hot Pepper"
+        "quote": "I'll definitely be going to the saloon tonight. What else is there to do?",
+        "loves": "Hot Pepper",
+        "likes": "Cactus Fruit",
+        "dislikes": "Morel",
+        "hates": "Bug Steak"
     }
 ]
