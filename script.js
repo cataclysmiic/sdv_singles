@@ -11,12 +11,12 @@ fetch('https://cataclysmiic.github.io/sdv_singles/villagers.json')
             div.innerHTML = `<div class="card mb-3 rounded-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4 text-center" style="background: #f7f7f7;">
-                    <img src="img/${villager.name}.png" class="img-fluid mx-auto d-block" alt="${villager.name}">
+                    <img src="img/${villager.name}.png" class="img-fluid mx-auto d-block pt-2" alt="${villager.name}">
                     <h5 class="card-title pt-2">${villager.name}</h5>
                     <span class="badge rounded-pill bg-dark">${villager.bday}</span>
                     </div>
                     <div class="col-md-8">
-                    <div class="card-body lead">
+                    <div class="card-body">
                         <p>“${villager.quote}”</p>
                         <table class="table table-borderless mb-0 text-center">
                             <tr>

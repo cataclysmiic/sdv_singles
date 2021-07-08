@@ -47,7 +47,7 @@
     {
         "name": "Harvey",
         "bday": "Winter 14",
-        "quote": "It's a lot of work, being a doctor. I don't eat as well as I should. If I didn't live alone I think it would be easier.",
+        "quote": "It's a lot of work, being a doctor. I don't eat as well as I should.",
         "loves": "Coffee",
         "likes": "Spring Onion",
         "dislikes": "Blueberry Tart",
@@ -65,7 +65,7 @@
     {
         "name": "Maru",
         "bday": "Summer 10",
-        "quote": "Some day I'm going to be a world-class inventor. You're lucky to be friends with me! ...just kidding.",
+        "quote": "Some day I'm going to be a world-class inventor. You're lucky to be friends with me!",
         "loves": "Battery Pack",
         "likes": "Copper Bar",
         "dislikes": "Crystal Fruit",
@@ -74,7 +74,7 @@
     {
         "name": "Penny",
         "bday": "Fall 2",
-        "quote": "When you're lost in a book, it's easy to forget the realities of your life. ...Maybe that's why I like reading so much.",
+        "quote": "When you're lost in a book, it's easy to forget the realities of your life.",
         "loves": "Poppy",
         "likes": "Chicken Statue",
         "dislikes": "Algae Soup",
@@ -92,7 +92,7 @@
     {
         "name": "Sebastian",
         "bday": "Winter 10",
-        "quote": "I was thinking... people are like stones skipping over the water. Eventually we're going to sink.",
+        "quote": "People are like stones skipping over the water. Eventually we're going to sink.",
         "loves": "Frozen Tear",
         "likes": "Flounder",
         "dislikes": "Geode",
