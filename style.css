@@ -1,77 +1,22 @@
 @font-face {
     font-family: 'Las Enter';
     src: url('fonts/lasenterpersonaluseonly-d301-webfont.woff2') format('woff2'),
-    url('fonts/lasenterpersonaluseonly-d301-webfont.woff') format('woff');
+         url('fonts/lasenterpersonaluseonly-d301-webfont.woff') format('woff');
 }
 @font-face {
     font-family: 'SDV Regular';
     src: url('fonts/stardew_valley_all_caps-webfont.woff2') format('woff2'),
-    url('fonts/stardew_valley_all_caps-webfont.woff') format('woff');
+         url('fonts/stardew_valley_all_caps-webfont.woff') format('woff');
 }
 @font-face {
     font-family: '8-bit';
     src: url('fonts/8-bit-pusab-webfont.woff2') format('woff2'),
          url('fonts/8-bit-pusab-webfont.woff') format('woff');
 }
-.navbar {
-    background: #1B1725;
-}
-.brand {    
-    max-height: 40px;
-    filter: drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
-            drop-shadow(0 0 4px rgba(245, 177, 198, 0.5))
-            drop-shadow(0 0 6px rgba(245, 177, 198, 0.5))
-            drop-shadow(0 0 10px rgba(234, 99, 140, 0.5))
-            drop-shadow(0 0 20px rgba(234, 99, 140, 0.5))
-            drop-shadow(0 0 40px rgba(234, 99, 140, 0.5))
-            drop-shadow(0 0 60px rgba(234, 99, 140, 0.5))
-            drop-shadow(0 0 80px rgba(187, 79, 112, 0.5))
-            drop-shadow(0 0 100px rgba(187, 79, 112, 0.5));
-    display: inline-block;
-    animation: brand 2s ease-in-out infinite alternate;
-}
-@keyframes brand {
-    0%, 12%, 32%, 72%, 100% {filter:
-        drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
-        drop-shadow(0 0 4px rgba(245, 177, 198, 0.5))
-        drop-shadow(0 0 6px rgba(245, 177, 198, 0.5))
-        drop-shadow(0 0 10px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 20px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 40px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 60px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 80px rgba(187, 79, 112, 0.5))
-        drop-shadow(0 0 100px rgba(187, 79, 112, 0.5));}
-    10% {filter:
-        drop-shadow(0 0 1px rgba(245, 177, 198, 0.5))
-        drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
-        drop-shadow(0 0 3px rgba(245, 177, 198, 0.5))
-        drop-shadow(0 0 8px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 15px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 35px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 55px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 75px rgba(187, 79, 112, 0.5))
-        drop-shadow(0 0 95px rgba(187, 79, 112, 0.5));}
-    30% {filter:
-        drop-shadow(0 0 1px rgba(245, 177, 198, 0.5))
-        drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
-        drop-shadow(0 0 3px rgba(245, 177, 198, 0.5))
-        drop-shadow(0 0 8px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 15px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 35px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 55px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 75px rgba(187, 79, 112, 0.5))
-        drop-shadow(0 0 95px rgba(187, 79, 112, 0.5));}
-    70% {filter:
-        drop-shadow(0 0 1px rgba(245, 177, 198, 0.5))
-        drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
-        drop-shadow(0 0 3px rgba(245, 177, 198, 0.5))
-        drop-shadow(0 0 8px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 15px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 35px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 55px rgba(234, 99, 140, 0.5))
-        drop-shadow(0 0 75px rgba(187, 79, 112, 0.5))
-        drop-shadow(0 0 95px rgba(187, 79, 112, 0.5));}
-}
+
+
+/* HEADER CSS  */
+
 .jumbotron {
     /* background: linear-gradient(rgba(148, 201, 169, 0.4), rgba(234, 99, 140, 0.4)),
                 url('img/sdv_night.png') 50% 70%; */
@@ -83,11 +28,14 @@
     color: #fdeff4;
     letter-spacing: 2px;
 }
+.display-1 {
+    font-size: 2.8rem;
+    display: block;
+}
 .neon {
     font-family: "Las Enter", sans-serif;
-    color: #fdeff4;
-    font-size: 6rem;
-    display: inline-block;
+    color: #fdeff4;    
+    font-size: 3.8rem;
     animation: neon 2s ease-in-out infinite alternate;
 }
 @keyframes neon {
@@ -133,22 +81,185 @@
         0px 0px 95px #bb4f70;}
 }
 
+
+/* NAVBAR CSS */
+
+.navbar {
+    background: #1B1725;
+}
+.brand {    
+    max-height: 40px;
+    display: inline-block;
+    animation: brand 2s ease-in-out infinite alternate;
+}
+@keyframes brand {
+    0%, 12%, 32%, 72%, 100% {filter:
+        drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 4px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 6px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 10px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 20px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 40px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 60px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 80px rgba(187, 79, 112, 0.5))
+        drop-shadow(0 0 100px rgba(187, 79, 112, 0.5));}
+    10% {filter:
+        drop-shadow(0 0 1px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 3px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 8px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 15px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 35px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 55px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 75px rgba(187, 79, 112, 0.5))
+        drop-shadow(0 0 95px rgba(187, 79, 112, 0.5));}
+    30% {filter:
+        drop-shadow(0 0 1px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 3px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 8px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 15px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 35px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 55px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 75px rgba(187, 79, 112, 0.5))
+        drop-shadow(0 0 95px rgba(187, 79, 112, 0.5));}
+    70% {filter:
+        drop-shadow(0 0 1px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 2px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 3px rgba(245, 177, 198, 0.5))
+        drop-shadow(0 0 8px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 15px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 35px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 55px rgba(234, 99, 140, 0.5))
+        drop-shadow(0 0 75px rgba(187, 79, 112, 0.5))
+        drop-shadow(0 0 95px rgba(187, 79, 112, 0.5));}
+}
+
+
+/* CARD CSS */
+
 .card-title {
     font-family: "8-bit", sans-serif;
     font-size: 1rem; 
 }
-
-.lead {
-    font-size: 1.1rem;
+.singles-card {
+    width: 440px;
+}
+.loves {
+    background: #B33C86;
+}
+.likes {
+    background: #EA638C
+}
+.dislikes {
+    background: #C6ECAE;
+}
+.hates {
+    background: #94C9A9;
+}
+.ltgrey {
+    background: #f7f7f7;
 }
 
 
-@media (max-width: 767px) {
+
+/* MEDIA QUERIES */
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+    .photo {
+        max-height: 100px;
+    }
+    .lead {
+        font-size: 0.9rem;
+    }
+    td img {
+        max-height:40px;
+    }
+    /* body {
+        background:turquoise;
+    } */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
     .display-1 {
-        font-size: 2.5rem;
-        display: block;
+        font-size: 2.8rem;
     }
     .neon {
+    font-size: 3.8rem;
+    }
+    .singles-card {
+        width: 500px;
+    }
+    .photo {
+        max-height: 128px;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    td img {
+        max-height:48px;
+    }
+    /* body {
+        background:violet;
+    } */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .display-1 {
+        font-size: 3.5rem;
+        display: inline-block;
+    }
+    .neon {
+    font-size: 4.5rem;
+    }
+    .singles-card {
+        width: 700px;
+    }
+    /* body {
+        background: tomato;
+    } */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .display-1 {
         font-size: 5rem;
     }
+    .neon {
+    font-size: 6rem;
+    }
+    .singles-card {
+        width: 460px;
+    }
+    .lead {
+        font-size: 0.9rem;
+    }
+    /* body {
+        background:yellow;
+    } */
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .singles-card {
+        width: 550px;
+    }
+    .lead {
+        font-size: 1.1rem;
+    }
+    /* body {
+        background:yellowgreen;
+    } */
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .singles-card {
+        width: 640px;
+    }
+    /* body {
+        background:white;
+    } */
 }
