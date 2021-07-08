@@ -6,7 +6,6 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 fetch('https://cataclysmiic.github.io/sdv_singles/villagers.json')
     .then(response => response.json())
     .then(json => {
-        console.log(json);
         json.forEach(villager => {
             const div = document.createElement('div');
             div.innerHTML = `<div class="card mb-3 rounded-3" style="max-width: 540px;">
@@ -40,5 +39,3 @@ fetch('https://cataclysmiic.github.io/sdv_singles/villagers.json')
             document.getElementById('singles').appendChild(div);
         });
     })
-
-
