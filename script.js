@@ -16,7 +16,7 @@ fetch('https://cataclysmiic.github.io/sdv_singles/villagers.json')
                     <span class="badge rounded-pill bg-dark">${villager.bday}</span>
                     </div>
                     <div class="col-md-8">
-                    <div class="card-body">
+                    <div class="card-body lead">
                         <p>“${villager.quote}”</p>
                         <table class="table table-borderless mb-0 text-center">
                             <tr>
