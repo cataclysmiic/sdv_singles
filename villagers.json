@@ -1,6 +1,7 @@
 [
     {
         "name": "Abigail",
+        "type": "Bachelorette",
         "bday": "Fall 13",
         "quote": "Wow, I just realized it's Friday. Sometimes I totally lose track of time.",
         "loves": "Amethyst",
@@ -10,6 +11,7 @@
     },
     {
         "name": "Alex",
+        "type": "Bachelor",
         "bday": "Summer 13",
         "quote": "My Grandma told me I should spend more time studying. Maybe she's right...",
         "loves": "Complete Breakfast",
@@ -19,6 +21,7 @@
     },
     {
         "name": "Elliott",
+        "type": "Bachelor",
         "bday": "Fall 5",
         "quote": "I'm Elliott... I live in the little cabin by the beach. It's a pleasure to meet you.",
         "loves": "Duck Feather",
@@ -28,6 +31,7 @@
     },
     {
         "name": "Emily",
+        "type": "Bachelorette",
         "bday": "Spring 27",
         "quote": "I have a secret hobby, but I won't say any more. Maybe I'll show you some day.",
         "loves": "Wool",
@@ -37,6 +41,7 @@
     },
     {
         "name": "Haley",
+        "type": "Bachelorette",
         "bday": "Spring 14",
         "quote": "The only thing I like about this town is the beach.",
         "loves": "Pink Cake",
@@ -46,6 +51,7 @@
     },
     {
         "name": "Harvey",
+        "type": "Bachelor",
         "bday": "Winter 14",
         "quote": "It's a lot of work, being a doctor. I don't eat as well as I should.",
         "loves": "Coffee",
@@ -55,6 +61,7 @@
     },
     {
         "name": "Leah",
+        "type": "Bachelorette",
         "bday": "Winter 23",
         "quote": "We wouldn't be able to survive without nature. It's good to remember that.",
         "loves": "Truffle",
@@ -64,6 +71,7 @@
     },
     {
         "name": "Maru",
+        "type": "Bachelorette",
         "bday": "Summer 10",
         "quote": "Some day I'm going to be a world-class inventor. You're lucky to be friends with me!",
         "loves": "Battery Pack",
@@ -73,6 +81,7 @@
     },
     {
         "name": "Penny",
+        "type": "Bachelorette",
         "bday": "Fall 2",
         "quote": "When you're lost in a book, it's easy to forget the realities of your life.",
         "loves": "Poppy",
@@ -82,6 +91,7 @@
     },
     {
         "name": "Sam",
+        "type": "Bachelor",
         "bday": "Summer 17",
         "quote": "Last night I practiced guitar for 4 hours straight. My fingers hurt like crazy.",
         "loves": "Tigerseye",
@@ -91,6 +101,7 @@
     },
     {
         "name": "Sebastian",
+        "type": "Bachelor",
         "bday": "Winter 10",
         "quote": "People are like stones skipping over the water. Eventually we're going to sink.",
         "loves": "Frozen Tear",
@@ -100,6 +111,7 @@
     },
     {
         "name": "Shane",
+        "type": "Bachelor",
         "bday": "Spring 20",
         "quote": "I'll definitely be going to the saloon tonight. What else is there to do?",
         "loves": "Hot Pepper",

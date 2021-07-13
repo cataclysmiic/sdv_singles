@@ -161,6 +161,10 @@
     background: #f7f7f7;
 }
 
+.table-striped {
+    letter-spacing: 1px;
+}
+
 
 
 /* MEDIA QUERIES */

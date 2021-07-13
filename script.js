@@ -3,6 +3,14 @@ let loves = [];
 let dislikes = [];
 let hates = [];
 
+function setupSelect(select, options) {
+    for(i = 0; i < options.length; i++) {
+        const option = document.createElement("option");
+        option.textContent = options[i];
+        option.value = options[i];
+        select.appendChild(option);
+    }
+}
 
 fetch('https://cataclysmiic.github.io/sdv_singles/villagers.json')
     .then(response => response.json())
@@ -45,34 +53,16 @@ fetch('https://cataclysmiic.github.io/sdv_singles/villagers.json')
             hates.push(villager.hates);
         })
 
-        const likesSelect = document.getElementById("likes_select");
-        for(i = 0; i < likes.length; i++) {
-            const option = document.createElement("option");
-            option.textContent = likes[i];
-            option.value = likes[i];
-            likesSelect.appendChild(option);
-        }
-        const lovesSelect = document.getElementById("loves_select");
-        for(i = 0; i < loves.length; i++) {
-            const option = document.createElement("option");
-            option.textContent = loves[i];
-            option.value = loves[i];
-            lovesSelect.appendChild(option);
-        }
-        const dislikesSelect = document.getElementById("dislikes_select");
-        for(i = 0; i < dislikes.length; i++) {
-            const option = document.createElement("option");
-            option.textContent = dislikes[i];
-            option.value = dislikes[i];
-            dislikesSelect.appendChild(option);
-        }
-        const hatesSelect = document.getElementById("hates_select");
-        for(i = 0; i < hates.length; i++) {
-            const option = document.createElement("option");
-            option.textContent = hates[i];
-            option.value = hates[i];
-            hatesSelect.appendChild(option);
-        }
+        setupSelect(document.getElementById("likes_select"), likes);
+        setupSelect(document.getElementById("loves_select"), loves);
+        setupSelect(document.getElementById("dislikes_select"), dislikes);
+        setupSelect(document.getElementById("hates_select"), hates);
+
+        setupSelect(document.getElementById("gift_select"), likes);
+        setupSelect(document.getElementById("gift_select"), loves);
+        setupSelect(document.getElementById("gift_select"), dislikes);
+        setupSelect(document.getElementById("gift_select"), hates);
+
     })
     .then(tooltip => {
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));

@@ -149,18 +149,45 @@
       <h1 class="display-5 py-3">Send a Gift</h1>
       <div class="d-flex justify-content-between">
 
-        <div class="col-5">
+        <div class="col-6">
           <table class="table table-striped">
-              <tr>
-                <td class="lead"><strong>Cat</strong> sent <img class="img-fluid" style="height:32px;" src="img/Quartz.png"><strong>Quartz</strong> to <img class="img-fluid" src="img/Harvey_Icon.png"><strong>Harvey</strong></td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-              </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td class="lead p-3"><strong>Cat</strong> sent <img class="img-fluid" style="height:32px;" src="img/Quartz.png"> <strong>Quartz</strong> to <img class="img-fluid" src="img/Harvey_Icon.png"> <strong>Harvey</strong></td>
+              <td class="text-muted p-3"><em>15 minutes ago</em></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td class="lead p-3"><strong>Cat</strong> sent <img class="img-fluid" style="height:32px;" src="img/Amethyst.png"> <strong>Amethyst</strong> to <img class="img-fluid" src="img/Abigail_Icon.png"> <strong>Abigail</strong></td>
+              <td class="text-muted p-3"><em>15 minutes ago</em></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td class="lead p-3"><strong>Cat</strong> sent <img class="img-fluid" style="height:32px;" src="img/Hot Pepper.png"> <strong>Hot Pepper</strong> to <img class="img-fluid" src="img/Shane_Icon.png"> <strong>Shane</strong></td>
+              <td class="text-muted p-3"><em>15 minutes ago</em></td>
+            </tr>
+
           </table>
+
+          <form class="border rounded p-3">
+            <div class="mb-3">
+              <div class="row mb-3">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Recipient" aria-label="Recipient">
+                </div>
+                <div class="col">
+                  <select id="gift_select" class="form-select" aria-label="Gift">
+                    <option selected>Select a gift</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button type="submit" class="btn btn-secondary mb-0 w-100">Send</button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
 
         <div class="col-5">
