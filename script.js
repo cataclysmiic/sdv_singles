@@ -12,12 +12,25 @@ function setupSelect(select, options) {
     }
 }
 
+const typeSelect = document.getElementById("type_select");
+
+typeSelect.addEventListener('change', e => {
+    console.log(typeSelect.value);
+    const getCards = document.getElementsByClassName(`${typeSelect.value.toLowerCase()}`);
+    console.log(getCards);
+    for (let i = 0; i < getCards.length; i++) {
+        console.log(getCards[i]);
+        getCards[i].className += " d-none";
+      }
+});
+
+
 fetch('https://cataclysmiic.github.io/sdv_singles/villagers.json')
     .then(response => response.json())
     .then(json => {
         json.forEach(villager => {
             const div = document.createElement('div');
-            div.innerHTML = `<div class="singles-card card mb-3 rounded-3 d-block">
+            div.innerHTML = `<div class="singles-card card mb-3 rounded-3 d-block ${villager.type.toLowerCase()}">
                 <div class="row g-0">
                     <div class="col-md-4 text-center ltgrey py-2">
                     <img src="img/${villager.name}.png" class="img-fluid mx-auto d-block photo" alt="${villager.name}">
