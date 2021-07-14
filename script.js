@@ -12,16 +12,43 @@ function setupSelect(select, options) {
     }
 }
 
-const typeSelect = document.getElementById("type_select");
+const groupSelect = document.getElementById("group_select");
+const bachelors = document.getElementsByClassName('bachelors');
+const bachelorettes = document.getElementsByClassName('bachelorettes');
 
-typeSelect.addEventListener('change', e => {
-    console.log(typeSelect.value);
-    const getCards = document.getElementsByClassName(`${typeSelect.value.toLowerCase()}`);
-    console.log(getCards);
-    for (let i = 0; i < getCards.length; i++) {
-        console.log(getCards[i]);
-        getCards[i].className += " d-none";
-      }
+function showBachelors() {
+    for (let i = 0; i < bachelors.length; i++) {
+        bachelors[i].style.display = 'block';
+    }
+}
+function showBachelorettes() {
+    for (let i = 0; i < bachelorettes.length; i++) {
+        bachelorettes[i].style.display = 'block';
+    }
+}
+function hideBachelorettes() {
+    for (let i = 0; i < bachelorettes.length; i++) {
+        bachelorettes[i].style.display = 'none';
+    }
+}
+function hideBachelors() {
+    for (let i = 0; i < bachelors.length; i++) {
+        bachelors[i].style.display = 'none';
+    }
+}
+
+
+groupSelect.addEventListener('change', e => {
+    if (groupSelect.value === "Bachelors") {
+        showBachelors();
+        hideBachelorettes();
+    } else if (groupSelect.value === "Bachelorettes") {
+        showBachelorettes();
+        hideBachelors();
+    } else if (groupSelect.value === "Everyone"){
+        showBachelors();
+        showBachelorettes();
+    };
 });
 
 
@@ -30,7 +57,7 @@ fetch('https://cataclysmiic.github.io/sdv_singles/villagers.json')
     .then(json => {
         json.forEach(villager => {
             const div = document.createElement('div');
-            div.innerHTML = `<div class="singles-card card mb-3 rounded-3 d-block ${villager.type.toLowerCase()}">
+            div.innerHTML = `<div class="singles-card card mb-3 rounded-3 ${villager.group}">
                 <div class="row g-0">
                     <div class="col-md-4 text-center ltgrey py-2">
                     <img src="img/${villager.name}.png" class="img-fluid mx-auto d-block photo" alt="${villager.name}">
