@@ -37,7 +37,6 @@ function hideBachelors() {
     }
 }
 
-
 groupSelect.addEventListener('change', e => {
     if (groupSelect.value === "Bachelors") {
         showBachelors();
