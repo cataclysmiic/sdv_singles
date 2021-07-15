@@ -52,7 +52,7 @@ groupSelect.addEventListener('change', e => {
 });
 
 
-fetch('https://cataclysmiic.github.io/sdv_singles/villagers.json')
+fetch('https://makeshiftjess.github.io/sdv_singles/villagers.json')
     .then(response => response.json())
     .then(json => {
         json.forEach(villager => {
