@@ -97,10 +97,7 @@ fetch('https://makeshiftjess.github.io/sdv_singles/villagers.json')
         setupSelect(document.getElementById("dislikes_select"), dislikes);
         setupSelect(document.getElementById("hates_select"), hates);
 
-        setupSelect(document.getElementById("gift_select"), likes);
-        setupSelect(document.getElementById("gift_select"), loves);
-        setupSelect(document.getElementById("gift_select"), dislikes);
-        setupSelect(document.getElementById("gift_select"), hates);
+        setupSelect(document.getElementById("gift_select"), [...likes, ...loves, ...dislikes, ...hates]);
 
     })
     .then(tooltip => {
