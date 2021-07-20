@@ -2,6 +2,7 @@ let likes = [];
 let loves = [];
 let dislikes = [];
 let hates = [];
+let villagers = [];
 
 function setupSelect(select, options) {
     for(i = 0; i < options.length; i++) {
@@ -90,6 +91,7 @@ fetch('https://makeshiftjess.github.io/sdv_singles/villagers.json')
             loves.push(villager.loves);
             dislikes.push(villager.dislikes);
             hates.push(villager.hates);
+            villagers.push(villager.name);
         })
 
         setupSelect(document.getElementById("likes_select"), likes);
@@ -97,9 +99,11 @@ fetch('https://makeshiftjess.github.io/sdv_singles/villagers.json')
         setupSelect(document.getElementById("dislikes_select"), dislikes);
         setupSelect(document.getElementById("hates_select"), hates);
 
+        setupSelect(document.getElementById("villager_select"), villagers);
         setupSelect(document.getElementById("gift_select"), [...likes, ...loves, ...dislikes, ...hates]);
 
     })
+    // BOOTSTRAP ENABLE TOOLTIP
     .then(tooltip => {
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
