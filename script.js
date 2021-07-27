@@ -1,11 +1,14 @@
+//CREATE EMPTY ARRAYS
 let likes = [];
 let loves = [];
 let dislikes = [];
 let hates = [];
 let villagers = [];
 
+
+//SETUP SELECT FUNCTION
 function setupSelect(select, options) {
-    for(i = 0; i < options.length; i++) {
+    for (i = 0; i < options.length; i++) {
         const option = document.createElement("option");
         option.textContent = options[i];
         option.value = options[i];
@@ -13,6 +16,75 @@ function setupSelect(select, options) {
     }
 }
 
+
+//JOIN FORM MODAL
+const joinForm = document.getElementById('join_form');
+const joinModal = document.getElementById('join_modal');
+const joinName = document.getElementById('join_name');
+const joinEmail = document.getElementById('join_email');
+const joinSeason = document.getElementById('join_season');
+const joinDate = document.getElementById('join_date');
+const joinLikes = document.getElementById('likes_select');
+const joinLoves = document.getElementById('loves_select');
+const joinDislikes = document.getElementById('dislikes_select');
+const joinHates = document.getElementById('hates_select');
+const joinQuote = document.getElementById('join_quote');
+joinForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    joinModal.innerHTML = `<p>You've joined with the following information:</p>
+                            <table class="table table-borderless">
+                            <tr>
+                            <td><span class="badge p-2 bg-secondary">Name</span> ${joinName.value}</td>
+                            <td><span class="badge p-2 bg-secondary">Birthday</span> ${joinSeason.value} ${joinDate.value}</td>
+                            </tr>
+                            <tr>
+                            <td colspan="2"><span class="badge p-2 bg-secondary">Email</span> ${joinEmail.value}</td>
+                            </tr>
+                            <tr>
+                            <td><span class="badge p-2 likes">Likes</span> ${joinLikes.value}</td>
+                            <td><span class="badge p-2 dislikes">Dislikes</span> ${joinDislikes.value}</td>
+                            </tr>
+                            <tr>
+                            <td><span class="badge p-2 loves">Loves</span> ${joinLoves.value}</td>
+                            <td><span class="badge p-2 hates">Hates</span> ${joinHates.value}</td>
+                            </tr>
+                            <tr>
+                            <td colspan="2"><span class="badge p-2 bg-secondary">Quote</span> ${joinQuote.value}</td>
+                            </tr>
+                            </table>`;
+    joinForm.reset();
+});
+
+
+//VALIDATION
+// function isValidName(name) {
+//     return /^[a-z]$/.test(name);
+// }
+
+// function showOrHideTip(show, element) {
+//     // show element when show is true, hide when false
+//     if (show) {
+//       element.style.display = "inherit";
+//     } else {
+//       element.style.display = "none";
+//     }
+//   }
+  
+//   function createListener(validator) {
+//     return e => {
+//       const text = e.target.value;
+//       const valid = validator(text);
+//       const showTip = text !== "" && !valid;
+//       const tooltip = e.target.nextElementSibling;
+//       showOrHideTip(showTip, tooltip);
+//       alert('error');
+//     };
+// //   }
+  
+//   joinName.addEventListener("input", createListener(isValidName));
+
+
+//FILTER SINGLES BY GROUP
 const groupSelect = document.getElementById("group_select");
 const bachelors = document.getElementsByClassName('bachelors');
 const bachelorettes = document.getElementsByClassName('bachelorettes');
@@ -22,16 +94,19 @@ function showBachelors() {
         bachelors[i].style.display = 'block';
     }
 }
+
 function showBachelorettes() {
     for (let i = 0; i < bachelorettes.length; i++) {
         bachelorettes[i].style.display = 'block';
     }
 }
+
 function hideBachelorettes() {
     for (let i = 0; i < bachelorettes.length; i++) {
         bachelorettes[i].style.display = 'none';
     }
 }
+
 function hideBachelors() {
     for (let i = 0; i < bachelors.length; i++) {
         bachelors[i].style.display = 'none';
@@ -45,13 +120,14 @@ groupSelect.addEventListener('change', e => {
     } else if (groupSelect.value === "Bachelorettes") {
         showBachelorettes();
         hideBachelors();
-    } else if (groupSelect.value === "Everyone"){
+    } else if (groupSelect.value === "Everyone") {
         showBachelors();
         showBachelorettes();
     };
 });
 
 
+//FETCH JSON & GENERATE CARDS, ARRAYS, SELECTS
 fetch('https://makeshiftjess.github.io/sdv_singles/villagers.json')
     .then(response => response.json())
     .then(json => {
@@ -98,6 +174,8 @@ fetch('https://makeshiftjess.github.io/sdv_singles/villagers.json')
         setupSelect(document.getElementById("loves_select"), loves);
         setupSelect(document.getElementById("dislikes_select"), dislikes);
         setupSelect(document.getElementById("hates_select"), hates);
+
+        // setupSelect(document.getElementById("rank_select"), villagers);
 
         setupSelect(document.getElementById("villager_select"), villagers);
         setupSelect(document.getElementById("gift_select"), [...likes, ...loves, ...dislikes, ...hates]);

@@ -1,218 +1,261 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
-    <title>Stardew Valley Singles</title>
-  </head>
-  <body>
 
-    <div class="jumbotron jumbotron-fluid text-center py-5">
-        <div class="container">
-            <div class="sdv display-1 align-middle">stardew valley
-                <span class="neon display-1 align-middle pb-3">singles</span>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <title>Stardew Valley Singles</title>
+</head>
+
+<body>
+
+  <div class="jumbotron jumbotron-fluid text-center py-5">
+    <div class="container">
+      <div class="sdv display-1 align-middle">stardew valley
+        <span class="neon display-1 align-middle pb-3">singles</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark p-3">
+    <div class="container-fluid">
+      <img class="brand px-2" src="img/pixel_heart_pink.png">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item px-1">
+            <a class="nav-link active" aria-current="page" href="#joinlink">Join</a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link" href="#giftlink">Send a Gift</a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link" href="#singleslink">Singles</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mb-5 pb-5">
+    <div class="row">
+      <div id="joinlink" class="col-xl-6">
+        <h1 class="display-5 py-3">Join</h1>
+        <form class="border rounded p-3" id="join_form">
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Name" aria-label="Name" id="join_name">
             </div>
-        </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Email" aria-label="Email" id="join_email">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <select class="form-select" aria-label="Season" id="join_season">
+                <option selected>Birth Season</option>
+                <option value="Winter">Winter</option>
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+                <option value="Fall">Fall</option>
+              </select>
+            </div>
+            <div class="col">
+              <select class="form-select" aria-label="Date" id="join_date">
+                <option selected>Birth Date</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <select id="likes_select" class="form-select" aria-label="Likes">
+                <option selected>Likes</option>
+              </select>
+            </div>
+            <div class="col">
+              <select id="loves_select" class="form-select" aria-label="Loves">
+                <option selected>Loves</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <select id="dislikes_select" class="form-select" aria-label="Dislikes">
+                <option selected>Dislikes</option>
+              </select>
+            </div>
+            <div class="col">
+              <select id="hates_select" class="form-select" aria-label="Hates">
+                <option selected>Hates</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <textarea class="form-control" rows="2" placeholder="Short quote" aria-label="Short quote" id="join_quote"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button type="submit" class="btn btn-secondary mb-0 w-100" data-bs-toggle="modal"
+                data-bs-target="#joinModal">Submit</button>
+            </div>
+          </div>
+        </form>
       </div>
 
-      <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark p-3">
-        <div class="container-fluid">
-          <img class="brand px-2" src="img/pixel_heart_pink.png">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item px-1">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item px-1">
-                <a class="nav-link" href="#">Singles</a>
-              </li>
-              <li class="nav-item px-1">
-                <a class="nav-link" href="#">Send a Gift</a>
-              </li>
-            </ul>
+      <!-- BOOTSTRAP MODAL -->
+      <div class="modal fade" id="joinModal" tabindex="-1" aria-labelledby="joinModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="joinModalLabel">Success!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="join_modal">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
-      </nav>
-    
-    <div class="container mb-5 pb-5">
-
-      <h1 class="display-5 py-3">Join</h1>
-
-      <div class="d-flex justify-content-between">
-        <div class="col-5">
-          <form class="border rounded p-3">
-            <div class="mb-3">
-              <div class="row mb-3">                
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Name" aria-label="Name">
-                </div>
-                <div class="col">
-                  <div class="row">
-                    <div class="col">
-                      <select class="form-select" aria-label="Season" data-bs-toggle="tooltip" data-bs-placement="top" title="Birth Season">
-                        <option selected>Season</option>
-                        <option value="1">Winter</option>
-                        <option value="2">Spring</option>
-                        <option value="3">Summer</option>
-                        <option value="4">Fall</option>
-                      </select>
-                    </div>
-                    <div class="col">
-                      <select class="form-select" aria-label="Day" data-bs-toggle="tooltip" data-bs-placement="top" title="Birth Date">
-                        <option selected>Day</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row mb-3">
-                <div class="col">
-                  <select id="likes_select" class="form-select" aria-label="Likes">
-                    <option selected>Likes</option>
-                  </select>
-                </div>
-                <div class="col">
-                  <select id="loves_select" class="form-select" aria-label="Loves">
-                    <option selected>Loves</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row mb-3">
-                <div class="col">
-                  <select id="dislikes_select" class="form-select" aria-label="Dislikes">
-                    <option selected>Dislikes</option>
-                  </select>
-                </div>
-                <div class="col">
-                  <select id="hates_select" class="form-select" aria-label="Hates">
-                    <option selected>Hates</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row mb-3">
-                <div class="col">
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Short quote" aria-label="Short quote"></textarea>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <button type="submit" class="btn btn-secondary mb-0 w-100">Submit</button>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-
-        <div class="col-5">
-          Wafer sweet tiramisu pie gummies brownie gingerbread powder. Marshmallow wafer pastry cupcake tootsie roll caramels gummies fruitcake. Soufflé soufflé brownie cookie candy canes tootsie roll sesame snaps sesame snaps topping. Sesame snaps bonbon sweet.
-        </div>
-
       </div>
 
 
-      <h1 class="display-5 py-3">Singles</h1>
-      <div class="float-end col-2 mb-3 pe-2">
-        <select id="group_select" class="form-select" aria-label="Group">
-          <option selected>Everyone</option>
-          <option value="Bachelors">Bachelors</option>
-          <option value="Bachelorettes">Bachelorettes</option>
-        </select>
-      </div>
-      <div id="singles" class="d-flex flex-wrap justify-content-evenly w-100"></div>
 
-      <h1 class="display-5 py-3">Send a Gift</h1>
-      <div class="d-flex justify-content-between">
+      <div id="giftlink" class="col-xl-6">
+        <h1 class="display-5 py-3">Send a Gift</h1>
+        <table class="table table-striped w-100 my-3">
+          <tr>
+            <td>&nbsp;</td>
+            <td class="lead p-2"><img class="img-fluid" src="img/Maru_Icon.png"> <strong>Maru</strong> sent <img
+                class="img-fluid" style="height:32px;" src="img/Poppy.png"> <strong>Poppy</strong> to <img
+                class="img-fluid" src="img/Penny_Icon.png">
+              <strong>Penny</strong></td>
+            <td class="text-muted p-3 small"><em>2 minutes ago</em></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td class="lead p-2"><img class="img-fluid" src="img/Abigail_Icon.png"> <strong>Abigail</strong> sent <img
+                class="img-fluid" style="height:32px;" src="img/Flounder.png"> <strong>Flounder</strong> to <img
+                class="img-fluid" src="img/Sebastian_Icon.png">
+              <strong>Sebastian</strong></td>
+            <td class="text-muted p-3 small"><em>15 minutes ago</em></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td class="lead p-2"><img class="img-fluid" src="img/Leah_Icon.png"> <strong>Leah</strong> sent <img
+                class="img-fluid" style="height:32px;" src="img/Squid.png"> <strong>Squid</strong> to <img
+                class="img-fluid" src="img/Elliott_Icon.png">
+              <strong>Elliott</strong></td>
+            <td class="text-muted p-3 small"><em>45 minutes ago</em></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td class="lead p-2"><img class="img-fluid" src="img/Haley_Icon.png"> <strong>Haley</strong> sent <img
+                class="img-fluid" style="height:32px;" src="img/Bug Steak.png"> <strong>Bug Steak</strong> to <img
+                class="img-fluid" src="img/Shane_Icon.png"> <strong>Shane</strong></td>
+            <td class="text-muted p-3 small"><em>1 hour ago</em></td>
+          </tr>
 
-        <div class="col-6">
-          <table class="table table-striped">
-            <tr>
-              <td>&nbsp;</td>
-              <td class="lead p-3"><strong>Cat</strong> sent <img class="img-fluid" style="height:32px;" src="img/Quartz.png"> <strong>Quartz</strong> to <img class="img-fluid" src="img/Harvey_Icon.png"> <strong>Harvey</strong></td>
-              <td class="text-muted p-3"><em>15 minutes ago</em></td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td class="lead p-3"><strong>Cat</strong> sent <img class="img-fluid" style="height:32px;" src="img/Amethyst.png"> <strong>Amethyst</strong> to <img class="img-fluid" src="img/Abigail_Icon.png"> <strong>Abigail</strong></td>
-              <td class="text-muted p-3"><em>15 minutes ago</em></td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td class="lead p-3"><strong>Cat</strong> sent <img class="img-fluid" style="height:32px;" src="img/Hot Pepper.png"> <strong>Hot Pepper</strong> to <img class="img-fluid" src="img/Shane_Icon.png"> <strong>Shane</strong></td>
-              <td class="text-muted p-3"><em>15 minutes ago</em></td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td class="lead p-3"><strong>Cat</strong> sent <img class="img-fluid" style="height:32px;" src="img/Complete Breakfast.png"> <strong>Complete Breakfast</strong> to <img class="img-fluid" src="img/Sebastian_Icon.png"> <strong>Sebastian</strong></td>
-              <td class="text-muted p-3"><em>15 minutes ago</em></td>
-            </tr>
+        </table>
 
-          </table>
-
-          <form class="border rounded p-3">
-            <div class="mb-3">
-              <div class="row mb-3">
-                <div class="col">
-                  <select id="villager_select" class="form-select" aria-label="Gift">
-                    <option selected>Recipient</option>
-                  </select>
-                </div>
-                <div class="col">
-                  <select id="gift_select" class="form-select" aria-label="Gift">
-                    <option selected>Select a gift</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <button type="submit" class="btn btn-secondary mb-0 w-100">Send</button>
-                </div>
-              </div>
+        <form class="border rounded p-3">
+          <div class="row mb-3">
+            <div class="col">
+              <select id="villager_select" class="form-select" aria-label="Recipient">
+                <option selected>Recipient</option>
+              </select>
             </div>
-          </form>
-        </div>
-
-        <div class="col-5">
-          
-        </div>
+            <div class="col">
+              <select id="gift_select" class="form-select" aria-label="Gift">
+                <option selected>Select a gift</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <fieldset disabled>
+                <button type="submit" class="btn btn-secondary mb-0 w-100">Sign in to send a gift</button>
+              </fieldset>
+            </div>
+          </div>
+        </form>
 
       </div>
 
     </div>
 
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+
+    <h1 id="singleslink" class="display-5 py-3">Singles</h1>
+    <div class="float-end col-l-2 mb-3 pe-2">
+      <select id="group_select" class="form-select" aria-label="Group">
+        <option selected>Everyone</option>
+        <option value="Bachelors">Bachelors</option>
+        <option value="Bachelorettes">Bachelorettes</option>
+      </select>
+    </div>
+    <div id="singles" class="d-flex flex-wrap justify-content-evenly w-100"></div>
+
+    <!-- <div class="d-flex justify-content-between">
+      <div class="col-5">
+        <h1 class="display-5 py-3">Rank Villagers</h1>
+        <form class="border rounded p-3">
+          <div class="row">
+            <div class="col">
+              <select id="rank_select" class="form-select" aria-label="Villager">
+                <option selected>Villager</option>
+              </select>
+            </div>
+            <div class="col">
+              <button type="submit" class="btn btn-secondary mb-0 w-100">Add to List</button>
+            </div>
+          </div>
+        </form>
+      </div> -->
+
+
+  </div>
+
+  </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
 </html>
