@@ -56,34 +56,6 @@ joinForm.addEventListener('submit', function (e) {
 });
 
 
-//VALIDATION
-// function isValidName(name) {
-//     return /^[a-z]$/.test(name);
-// }
-
-// function showOrHideTip(show, element) {
-//     // show element when show is true, hide when false
-//     if (show) {
-//       element.style.display = "inherit";
-//     } else {
-//       element.style.display = "none";
-//     }
-//   }
-  
-//   function createListener(validator) {
-//     return e => {
-//       const text = e.target.value;
-//       const valid = validator(text);
-//       const showTip = text !== "" && !valid;
-//       const tooltip = e.target.nextElementSibling;
-//       showOrHideTip(showTip, tooltip);
-//       alert('error');
-//     };
-// //   }
-  
-//   joinName.addEventListener("input", createListener(isValidName));
-
-
 //FILTER SINGLES BY GROUP
 const groupSelect = document.getElementById("group_select");
 const bachelors = document.getElementsByClassName('bachelors');
