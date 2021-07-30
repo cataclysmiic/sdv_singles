@@ -1,61 +1,34 @@
 const date = new Date();
 
-function season() {
-    if (date.getMonth() + 1 === 3 || date.getMonth() + 1 === 4 || date.getMonth() + 1 === 5) {
+//GET DAY NUMBER (DIVIDE BY 3.25 TO CONVERT TO SDV)
+const dayNumber = Math.ceil((date - new Date(date.getFullYear(), 0, 1)) / 86400000);
+
+function getSeason() {
+    if (dayNumber >= 60 && dayNumber <= 152) {
         return `Spring`;
-    } else if (date.getMonth() + 1 === 6 || date.getMonth() + 1 === 7 || date.getMonth() + 1 === 8) {
+    } else if (dayNumber >= 153 && dayNumber <= 244) {
         return `Summer`;
-    } else if (date.getMonth() + 1 === 9 || date.getMonth() + 1 === 10 || date.getMonth() + 1 === 11) {
+    } else if (dayNumber >= 245 && dayNumber <= 335) {
         return `Fall`;
-    } else {
+    } else if (dayNumber >= 336 || dayNumber <= 59) {
         return `Winter`;
     }
 };
 
-function day() {
-    if (date.getMonth === 3 || date.getMonth === 5 || date.getMonth === 8 || date.getMonth === 10) {
-        if (Math.floor(date.getDate() * (28 / 30)) > 0) {
-            return Math.floor(date.getDate() * (28 / 30));
-        } else {
-            return 1;
-        }
-    } else if (date.getMonth === 1) {
-        if (date.getDate() === 29) {
-            return 28;
-        } else {
-            return date.getDate();
-        }
-    } else {
-        if (Math.floor(date.getDate() * (28 / 31)) > 0) {
-            return Math.floor(date.getDate() * (28 / 31));
-        } else {
-            return 1;
-        }
-    }
-}
-
-
-//GET DAY NUMBER & CONVERT TO SDV TIME
-//const dayNumber = Math.ceil((date - new Date(date.getFullYear(),0,1)) / 86400000);
-//divide dayNumber by 3.25 to get SDV day number
-
-
-//COUNTDOWN TO DANCE OF THE JELLIES
 const eventDate = new Date("September 19, 2021");
-const eventName = "the Dance of the Jellies";
-const diff = eventDate.getTime() - date.getTime();
-const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+const eventName = "Dance of the Jellies";
+const daysLeft = Math.ceil((eventDate - date) / 86400000);
 
 function countdown() {
-    if (days > 1) {
-        return `There are ${days + 1} days until ${eventName}.`;
-    } else if (days == 1) {
-        return `There are only two days left until ${eventName}!`;
-    } else if (days == 0) {
-        return `Tomorrow is ${eventName}!`;
+    if (daysLeft > 2) {
+        return `There are ${daysLeft} days until the ${eventName}.`;
+    } else if (daysLeft == 2) {
+        return `Only 2 days left until the ${eventName}!`;
+    } else if (daysLeft == 1) {
+        return `Tomorrow is the ${eventName}!`;
     } else {
-        return `${eventName} is today!`;
+        return `The ${eventName} is today!`;
     }
 }
 
-document.getElementById("countdown").innerHTML = `Today is ${season()} ${day()}. ${countdown()}`;
+document.getElementById("countdown").innerHTML = `It's ${getSeason()}. ${countdown()}`;
