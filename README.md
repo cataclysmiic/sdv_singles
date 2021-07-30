@@ -11,7 +11,7 @@ Mock dating website for villagers in the game Stardew Valley. "Sign up" to creat
 - [x] Creates an array, populates it with multiple values and retrieves those values for use in the project
   * Likes, Dislikes, Loves and Hates selects are arrays generated from JSON file and used in the join form
 - [x] Calculate and display data based on an external factor (ex: get the current date, and display how many days remaining until some event)
-  * Current date (converted to Stardew Valley time) and countdown to the Dance of the Jellies
+  * Current season (converted to Stardew Valley time) and countdown to the Dance of the Jellies
 ### Upcoming features
 - [ ] Add and rank villagers with a draggable list
 - [ ] Join form info saved and displayed as "logged in"
@@ -19,4 +19,4 @@ Mock dating website for villagers in the game Stardew Valley. "Sign up" to creat
 
 
 ## About the date
-Stardew Valley time consists of 4 seasons (Spring, Summer, Fall, Winter) of 28 days each. The date displayed is a conversion of our time to theirs. The countdown displays the days remaining until the date of the Dance of the Jellies converted to our time.
+Stardew Valley time consists of 4 seasons (Spring, Summer, Fall, Winter) of 28 days each. The full conversion is a work in progress, but the season displayed is converted to SDV time in `date.js`. The countdown displays the days remaining until the date of the next event (the Dance of the Jellies) converted to our time.
