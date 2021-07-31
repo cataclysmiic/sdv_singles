@@ -143,7 +143,7 @@ joinForm.addEventListener('submit', function (e) {
 // SHOW JOIN FORM OR PROFILE
 if (profileName) {
     joinArea.style.display = 'none';
-    showProfile()
+    showProfile();
 } else {    
     joinArea.style.display = 'block';
 }
