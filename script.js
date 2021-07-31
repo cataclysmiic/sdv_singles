@@ -60,7 +60,7 @@ fetch('https://makeshiftjess.github.io/sdv_singles/villagers.json')
             villagers.push(villager.name);
         })
 
-        if (!profileName) {
+        if (!localStorage.getItem('name')) {
             setupSelect(document.getElementById("likes_select"), likes);
             setupSelect(document.getElementById("loves_select"), loves);
             setupSelect(document.getElementById("dislikes_select"), dislikes);
