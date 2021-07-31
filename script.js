@@ -42,18 +42,20 @@ joinForm.addEventListener('submit', function (e) {
     localStorage.setItem('loves', joinLoves.value);
     localStorage.setItem('hates', joinHates.value);
     localStorage.setItem('quote', joinQuote.value);
-
-    const profileName = localStorage.getItem('name');
-    const profileSeason = localStorage.getItem('season');
-    const profileDay = localStorage.getItem('day');
-    const profileLikes = localStorage.getItem('likes');
-    const profileDislikes = localStorage.getItem('dislikes');
-    const profileLoves = localStorage.getItem('loves');
-    const profileHates = localStorage.getItem('hates');
-    const profileQuote = localStorage.getItem('quote');
-
     joinForm.style.display = 'none';
+});
 
+const profileName = localStorage.getItem('name');
+const profileSeason = localStorage.getItem('season');
+const profileDay = localStorage.getItem('day');
+const profileLikes = localStorage.getItem('likes');
+const profileDislikes = localStorage.getItem('dislikes');
+const profileLoves = localStorage.getItem('loves');
+const profileHates = localStorage.getItem('hates');
+const profileQuote = localStorage.getItem('quote');
+
+if (profileName) {
+    joinForm.style.display = 'none';
     joinArea.innerHTML = `<h1 class="display-5 py-3">Profile</h1>
                             <p>Name: ${profileName}</p>
                             <p>Birthday: ${profileSeason} ${profileDay}</p>
@@ -62,10 +64,6 @@ joinForm.addEventListener('submit', function (e) {
                             <p>Loves: ${profileLoves}</p>
                             <p>Hates: ${profileHates}</p>
                             <p>Quote: ${profileQuote}</p>`
-});
-
-if (localStorage.getItem('name')) {
-    joinForm.style.display = 'none';
 }
 
 //FILTER SINGLES BY GROUP
