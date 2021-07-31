@@ -64,6 +64,8 @@ if (profileName) {
                             <p>Loves: ${profileLoves}</p>
                             <p>Hates: ${profileHates}</p>
                             <p>Quote: ${profileQuote}</p>`
+} else {    
+    joinForm.style.display = 'block';
 }
 
 //FILTER SINGLES BY GROUP
