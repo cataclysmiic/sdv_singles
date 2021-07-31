@@ -29,30 +29,62 @@ const joinLoves = document.getElementById('loves_select');
 const joinDislikes = document.getElementById('dislikes_select');
 const joinHates = document.getElementById('hates_select');
 const joinQuote = document.getElementById('join_quote');
+
+const joinArea = document.getElementById('joinlink');
+
 joinForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    joinModal.innerHTML = `<p>You've joined with the following information:</p>
-                            <table class="table table-borderless">
-                            <tr>
-                            <td><span class="badge p-2 bg-secondary">Name</span> ${joinName.value}</td>
-                            <td><span class="badge p-2 bg-secondary">Birthday</span> ${joinSeason.value} ${joinDate.value}</td>
-                            </tr>
-                            <tr>
-                            <td colspan="2"><span class="badge p-2 bg-secondary">Email</span> ${joinEmail.value}</td>
-                            </tr>
-                            <tr>
-                            <td><span class="badge p-2 likes">Likes</span> ${joinLikes.value}</td>
-                            <td><span class="badge p-2 dislikes">Dislikes</span> ${joinDislikes.value}</td>
-                            </tr>
-                            <tr>
-                            <td><span class="badge p-2 loves">Loves</span> ${joinLoves.value}</td>
-                            <td><span class="badge p-2 hates">Hates</span> ${joinHates.value}</td>
-                            </tr>
-                            <tr>
-                            <td colspan="2"><span class="badge p-2 bg-secondary">Quote</span> ${joinQuote.value}</td>
-                            </tr>
-                            </table>`;
-    joinForm.reset();
+    localStorage.setItem('name', joinName.value);
+    localStorage.setItem('season', joinSeason.value);
+    localStorage.setItem('day', joinDate.value);
+    localStorage.setItem('likes', joinLikes.value);
+    localStorage.setItem('dislikes', joinDislikes.value);
+    localStorage.setItem('loves', joinLoves.value);
+    localStorage.setItem('hates', joinHates.value);
+    localStorage.setItem('quote', joinQuote.value);
+
+    const profileName = localStorage.getItem('name');
+    const profileSeason = localStorage.getItem('season');
+    const profileDay = localStorage.getItem('day');
+    const profileLikes = localStorage.getItem('likes');
+    const profileDislikes = localStorage.getItem('dislikes');
+    const profileLoves = localStorage.getItem('loves');
+    const profileHates = localStorage.getItem('hates');
+    const profileQuote = localStorage.getItem('quote');
+    
+    joinForm.style.display = 'none';
+
+    joinArea.innerHTML = `<h1 class="display-5 py-3">Profile</h1>
+                            <p>Name: ${profileName}</p>
+                            <p>Birthday: ${profileSeason} ${profileDay}</p>
+                            <p>Likes: ${profileLikes}</p>
+                            <p>Dislikes: ${profileDislikes}</p>
+                            <p>Loves: ${profileLoves}</p>
+                            <p>Hates: ${profileHates}</p>
+                            <p>Quote: ${profileQuote}</p>`
+
+                            // joinModal.innerHTML = `<p>You've joined with the following information:</p>
+    //                         <table class="table table-borderless">
+    //                         <tr>
+    //                         <td><span class="badge p-2 bg-secondary">Name</span> ${joinName.value}</td>
+    //                         <td><span class="badge p-2 bg-secondary">Birthday</span> ${joinSeason.value} ${joinDate.value}</td>
+    //                         </tr>
+    //                         <tr>
+    //                         <td colspan="2"><span class="badge p-2 bg-secondary">Email</span> ${joinEmail.value}</td>
+    //                         </tr>
+    //                         <tr>
+    //                         <td><span class="badge p-2 likes">Likes</span> ${joinLikes.value}</td>
+    //                         <td><span class="badge p-2 dislikes">Dislikes</span> ${joinDislikes.value}</td>
+    //                         </tr>
+    //                         <tr>
+    //                         <td><span class="badge p-2 loves">Loves</span> ${joinLoves.value}</td>
+    //                         <td><span class="badge p-2 hates">Hates</span> ${joinHates.value}</td>
+    //                         </tr>
+    //                         <tr>
+    //                         <td colspan="2"><span class="badge p-2 bg-secondary">Quote</span> ${joinQuote.value}</td>
+    //                         </tr>
+    //                         </table>`;
+    
 });
 
 
