@@ -137,6 +137,7 @@ joinForm.addEventListener('submit', function (e) {
     localStorage.setItem('hates', joinHates.value);
     localStorage.setItem('quote', joinQuote.value);
     joinArea.style.display = 'none';
+    showProfile();
 });
 
 
