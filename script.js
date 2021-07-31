@@ -51,7 +51,7 @@ joinForm.addEventListener('submit', function (e) {
     const profileLoves = localStorage.getItem('loves');
     const profileHates = localStorage.getItem('hates');
     const profileQuote = localStorage.getItem('quote');
-    
+
     joinForm.style.display = 'none';
 
     joinArea.innerHTML = `<h1 class="display-5 py-3">Profile</h1>
@@ -62,31 +62,11 @@ joinForm.addEventListener('submit', function (e) {
                             <p>Loves: ${profileLoves}</p>
                             <p>Hates: ${profileHates}</p>
                             <p>Quote: ${profileQuote}</p>`
-
-                            // joinModal.innerHTML = `<p>You've joined with the following information:</p>
-    //                         <table class="table table-borderless">
-    //                         <tr>
-    //                         <td><span class="badge p-2 bg-secondary">Name</span> ${joinName.value}</td>
-    //                         <td><span class="badge p-2 bg-secondary">Birthday</span> ${joinSeason.value} ${joinDate.value}</td>
-    //                         </tr>
-    //                         <tr>
-    //                         <td colspan="2"><span class="badge p-2 bg-secondary">Email</span> ${joinEmail.value}</td>
-    //                         </tr>
-    //                         <tr>
-    //                         <td><span class="badge p-2 likes">Likes</span> ${joinLikes.value}</td>
-    //                         <td><span class="badge p-2 dislikes">Dislikes</span> ${joinDislikes.value}</td>
-    //                         </tr>
-    //                         <tr>
-    //                         <td><span class="badge p-2 loves">Loves</span> ${joinLoves.value}</td>
-    //                         <td><span class="badge p-2 hates">Hates</span> ${joinHates.value}</td>
-    //                         </tr>
-    //                         <tr>
-    //                         <td colspan="2"><span class="badge p-2 bg-secondary">Quote</span> ${joinQuote.value}</td>
-    //                         </tr>
-    //                         </table>`;
-    
 });
 
+if (localStorage.getItem('name')) {
+    joinForm.style.display = 'none';
+}
 
 //FILTER SINGLES BY GROUP
 const groupSelect = document.getElementById("group_select");
