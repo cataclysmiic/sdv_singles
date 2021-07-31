@@ -1,4 +1,4 @@
-//CREATE EMPTY ARRAYS
+// CREATE EMPTY ARRAYS
 let likes = [];
 let loves = [];
 let dislikes = [];
@@ -6,7 +6,7 @@ let hates = [];
 let villagers = [];
 
 
-//SETUP SELECT FUNCTION
+// SETUP SELECT FUNCTION
 function setupSelect(select, options) {
     for (i = 0; i < options.length; i++) {
         const option = document.createElement("option");
@@ -17,7 +17,7 @@ function setupSelect(select, options) {
 }
 
 
-//FETCH JSON & GENERATE CARDS, ARRAYS, SELECTS
+// FETCH JSON & GENERATE CARDS, ARRAYS, SELECTS
 fetch('https://makeshiftjess.github.io/sdv_singles/villagers.json')
     .then(response => response.json())
     .then(json => {
@@ -82,7 +82,12 @@ fetch('https://makeshiftjess.github.io/sdv_singles/villagers.json')
     })
 
 
-//JOIN FORM MODAL
+// JOIN/PROFILE AREA
+const joinArea = document.getElementById('join');
+const profileArea = document.getElementById('profile');
+
+
+// JOIN FORM INFO
 const joinForm = document.getElementById('join_form');
 const joinModal = document.getElementById('join_modal');
 const joinName = document.getElementById('join_name');
@@ -95,8 +100,32 @@ const joinDislikes = document.getElementById('dislikes_select');
 const joinHates = document.getElementById('hates_select');
 const joinQuote = document.getElementById('join_quote');
 
-const joinArea = document.getElementById('joinlink');
 
+// SAVE JOIN FORM INFO TO LOCALSTORAGE
+const profileName = localStorage.getItem('name');
+const profileSeason = localStorage.getItem('season');
+const profileDay = localStorage.getItem('day');
+const profileLikes = localStorage.getItem('likes');
+const profileDislikes = localStorage.getItem('dislikes');
+const profileLoves = localStorage.getItem('loves');
+const profileHates = localStorage.getItem('hates');
+const profileQuote = localStorage.getItem('quote');
+
+
+//GENERATE PROFILE FROM JOIN FORM INFO
+function showProfile() {
+    profileArea.innerHTML = `<h1 class="display-5 py-3">Profile</h1>
+                            <p>Name: ${profileName}</p>
+                            <p>Birthday: ${profileSeason} ${profileDay}</p>
+                            <p>Likes: ${profileLikes}</p>
+                            <p>Dislikes: ${profileDislikes}</p>
+                            <p>Loves: ${profileLoves}</p>
+                            <p>Hates: ${profileHates}</p>
+                            <p>Quote: ${profileQuote}</p>`
+}
+
+
+// JOIN FORM BEHAVIOR
 joinForm.addEventListener('submit', function (e) {
     e.preventDefault();
     localStorage.setItem('name', joinName.value);
@@ -107,33 +136,20 @@ joinForm.addEventListener('submit', function (e) {
     localStorage.setItem('loves', joinLoves.value);
     localStorage.setItem('hates', joinHates.value);
     localStorage.setItem('quote', joinQuote.value);
-    joinForm.style.display = 'none';
+    joinArea.style.display = 'none';
 });
 
-const profileName = localStorage.getItem('name');
-const profileSeason = localStorage.getItem('season');
-const profileDay = localStorage.getItem('day');
-const profileLikes = localStorage.getItem('likes');
-const profileDislikes = localStorage.getItem('dislikes');
-const profileLoves = localStorage.getItem('loves');
-const profileHates = localStorage.getItem('hates');
-const profileQuote = localStorage.getItem('quote');
 
+// SHOW JOIN FORM OR PROFILE
 if (profileName) {
-    joinForm.style.display = 'none';
-    joinArea.innerHTML = `<h1 class="display-5 py-3">Profile</h1>
-                            <p>Name: ${profileName}</p>
-                            <p>Birthday: ${profileSeason} ${profileDay}</p>
-                            <p>Likes: ${profileLikes}</p>
-                            <p>Dislikes: ${profileDislikes}</p>
-                            <p>Loves: ${profileLoves}</p>
-                            <p>Hates: ${profileHates}</p>
-                            <p>Quote: ${profileQuote}</p>`
+    joinArea.style.display = 'none';
+    showProfile()
 } else {    
-    joinForm.style.display = 'block';
+    joinArea.style.display = 'block';
 }
 
-//FILTER SINGLES BY GROUP
+
+// FILTER SINGLES BY GROUP
 const groupSelect = document.getElementById("group_select");
 const bachelors = document.getElementsByClassName('bachelors');
 const bachelorettes = document.getElementsByClassName('bachelorettes');

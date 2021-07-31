@@ -33,13 +33,13 @@
             <a class="nav-link" href="#home">Home</a>
           </li>
           <li class="nav-item px-1">
-            <a class="nav-link" href="#joinlink">Join</a>
+            <a class="nav-link" href="#join_profile">Join</a>
           </li>
           <li class="nav-item px-1">
-            <a class="nav-link" href="#giftlink">Send a Gift</a>
+            <a class="nav-link" href="#send_a_gift">Send a Gift</a>
           </li>
           <li class="nav-item px-1">
-            <a class="nav-link" href="#singleslink">Singles</a>
+            <a class="nav-link" href="#view_singles">Singles</a>
           </li>
         </ul>
       </div>
@@ -56,99 +56,101 @@
     <div id="date_test"></div>
 
     <div class="row">
-      <div id="joinlink" class="col-xl-6">
-        <h1 class="display-5 py-3">Join</h1>
-        <form class="border rounded p-3" id="join_form">
-          <div class="row mb-3">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Name" aria-label="Name" id="join_name">
+      <div id="join_profile" class="col-xl-6">
+        <div id="join">
+          <h1 class="display-5 py-3">Join</h1>
+          <form class="border rounded p-3" id="join_form">
+            <div class="row mb-3">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Name" aria-label="Name" id="join_name">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Email" aria-label="Email" id="join_email">
+              </div>
             </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Email" aria-label="Email" id="join_email">
+            <div class="row mb-3">
+              <div class="col">
+                <select class="form-select" aria-label="Season" id="join_season">
+                  <option selected>Birth Season</option>
+                  <option value="Winter">Winter</option>
+                  <option value="Spring">Spring</option>
+                  <option value="Summer">Summer</option>
+                  <option value="Fall">Fall</option>
+                </select>
+              </div>
+              <div class="col">
+                <select class="form-select" aria-label="Date" id="join_date">
+                  <option selected>Birth Date</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col">
-              <select class="form-select" aria-label="Season" id="join_season">
-                <option selected>Birth Season</option>
-                <option value="Winter">Winter</option>
-                <option value="Spring">Spring</option>
-                <option value="Summer">Summer</option>
-                <option value="Fall">Fall</option>
-              </select>
+            <div class="row mb-3">
+              <div class="col">
+                <select id="likes_select" class="form-select" aria-label="Likes">
+                  <option selected>Likes</option>
+                </select>
+              </div>
+              <div class="col">
+                <select id="loves_select" class="form-select" aria-label="Loves">
+                  <option selected>Loves</option>
+                </select>
+              </div>
             </div>
-            <div class="col">
-              <select class="form-select" aria-label="Date" id="join_date">
-                <option selected>Birth Date</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-              </select>
+            <div class="row mb-3">
+              <div class="col">
+                <select id="dislikes_select" class="form-select" aria-label="Dislikes">
+                  <option selected>Dislikes</option>
+                </select>
+              </div>
+              <div class="col">
+                <select id="hates_select" class="form-select" aria-label="Hates">
+                  <option selected>Hates</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col">
-              <select id="likes_select" class="form-select" aria-label="Likes">
-                <option selected>Likes</option>
-              </select>
+            <div class="row mb-3">
+              <div class="col">
+                <textarea class="form-control" rows="2" placeholder="Short quote" aria-label="Short quote"
+                  id="join_quote"></textarea>
+              </div>
             </div>
-            <div class="col">
-              <select id="loves_select" class="form-select" aria-label="Loves">
-                <option selected>Loves</option>
-              </select>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col">
-              <select id="dislikes_select" class="form-select" aria-label="Dislikes">
-                <option selected>Dislikes</option>
-              </select>
-            </div>
-            <div class="col">
-              <select id="hates_select" class="form-select" aria-label="Hates">
-                <option selected>Hates</option>
-              </select>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col">
-              <textarea class="form-control" rows="2" placeholder="Short quote" aria-label="Short quote"
-                id="join_quote"></textarea>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <button type="submit" class="btn btn-secondary mb-0 w-100">Submit</button>
-              <!-- <button type="submit" class="btn btn-secondary mb-0 w-100" data-bs-toggle="modal"
+            <div class="row">
+              <div class="col">
+                <button type="submit" class="btn btn-secondary mb-0 w-100">Submit</button>
+                <!-- <button type="submit" class="btn btn-secondary mb-0 w-100" data-bs-toggle="modal"
                 data-bs-target="#joinModal">Submit</button> -->
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
 
       <!-- BOOTSTRAP MODAL -->
@@ -168,7 +170,7 @@
         </div>
       </div>
 
-      <div id="giftlink" class="col-xl-6">
+      <div id="send_a_gift" class="col-xl-6">
         <h1 class="display-5 py-3">Send a Gift</h1>
         <table class="table table-striped w-100 my-3">
           <tr>
@@ -230,7 +232,7 @@
     </div>
 
 
-    <h1 id="singleslink" class="display-5 py-3">Singles</h1>
+    <h1 id="view_singles" class="display-5 py-3">Singles</h1>
     <div class="float-end col-l-2 mb-3 pe-2">
       <select id="group_select" class="form-select" aria-label="Group">
         <option selected>Everyone</option>
