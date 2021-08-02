@@ -100,17 +100,6 @@ const joinHates = document.getElementById('hates_select');
 const joinQuote = document.getElementById('join_quote');
 
 
-// SAVE JOIN FORM INFO TO LOCALSTORAGE
-const profileName = localStorage.getItem('name');
-const profileSeason = localStorage.getItem('season');
-const profileDay = localStorage.getItem('day');
-const profileLikes = localStorage.getItem('likes');
-const profileDislikes = localStorage.getItem('dislikes');
-const profileLoves = localStorage.getItem('loves');
-const profileHates = localStorage.getItem('hates');
-const profileQuote = localStorage.getItem('quote');
-
-
 // JOIN FORM BEHAVIOR
 joinForm.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -125,6 +114,17 @@ joinForm.addEventListener('submit', function (e) {
     joinArea.style.display = 'none';
     showProfile();
 });
+
+
+// SAVE JOIN FORM INFO TO LOCALSTORAGE
+const profileName = localStorage.getItem('name');
+const profileSeason = localStorage.getItem('season');
+const profileDay = localStorage.getItem('day');
+const profileLikes = localStorage.getItem('likes');
+const profileDislikes = localStorage.getItem('dislikes');
+const profileLoves = localStorage.getItem('loves');
+const profileHates = localStorage.getItem('hates');
+const profileQuote = localStorage.getItem('quote');
 
 
 //GENERATE PROFILE FROM JOIN FORM INFO
