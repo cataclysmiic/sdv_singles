@@ -57,21 +57,17 @@
 
     <div class="row">
       <div id="join_profile" class="col-xl-6">
-        <div id="join">
+        <div id="join" style="display: none;">
           <h1 class="display-5 py-3">Join</h1>
           <form class="border rounded p-3" id="join_form">
             <div class="row mb-3">
-              <div class="col">
+              <div class="col-6">
                 <input type="text" class="form-control" placeholder="Name" aria-label="Name" id="join_name">
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Email" aria-label="Email" id="join_email">
-              </div>
-            </div>
-            <div class="row mb-3">
-              <div class="col">
-                <select class="form-select" aria-label="Season" id="join_season">
-                  <option selected>Birth Season</option>
+                <select class="form-select" aria-label="Season" id="join_season" data-bs-toggle="tooltip"
+                  data-bs-placement="top" title="Birth Season">
+                  <option selected>Season</option>
                   <option value="Winter">Winter</option>
                   <option value="Spring">Spring</option>
                   <option value="Summer">Summer</option>
@@ -79,8 +75,9 @@
                 </select>
               </div>
               <div class="col">
-                <select class="form-select" aria-label="Date" id="join_date">
-                  <option selected>Birth Date</option>
+                <select class="form-select" aria-label="Date" id="join_date" data-bs-toggle="tooltip"
+                  data-bs-placement="top" title="Birth Date">
+                  <option selected>Date</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -145,8 +142,6 @@
             <div class="row">
               <div class="col">
                 <button type="submit" class="btn btn-secondary mb-0 w-100">Submit</button>
-                <!-- <button type="submit" class="btn btn-secondary mb-0 w-100" data-bs-toggle="modal"
-                data-bs-target="#joinModal">Submit</button> -->
               </div>
             </div>
           </form>
@@ -154,26 +149,9 @@
         <div id="profile"></div>
       </div>
 
-      <!-- BOOTSTRAP MODAL -->
-      <div class="modal fade" id="joinModal" tabindex="-1" aria-labelledby="joinModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="joinModalLabel">Success!</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="join_modal">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div id="send_a_gift" class="col-xl-6">
         <h1 class="display-5 py-3">Send a Gift</h1>
-        <table class="table table-striped w-100 my-3">
+        <table class="table table-striped w-100">
           <tr>
             <td>&nbsp;</td>
             <td class="lead p-2"><img class="img-fluid" src="img/Maru_Icon.png"> <strong>Maru</strong> sent <img
@@ -189,14 +167,6 @@
                 class="img-fluid" src="img/Sebastian_Icon.png">
               <strong>Sebastian</strong></td>
             <td class="text-muted p-3 small"><em>15 minutes ago</em></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td class="lead p-2"><img class="img-fluid" src="img/Leah_Icon.png"> <strong>Leah</strong> sent <img
-                class="img-fluid" style="height:32px;" src="img/Squid.png"> <strong>Squid</strong> to <img
-                class="img-fluid" src="img/Elliott_Icon.png">
-              <strong>Elliott</strong></td>
-            <td class="text-muted p-3 small"><em>45 minutes ago</em></td>
           </tr>
           <tr>
             <td>&nbsp;</td>

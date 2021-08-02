@@ -91,7 +91,6 @@ const profileArea = document.getElementById('profile');
 const joinForm = document.getElementById('join_form');
 const joinModal = document.getElementById('join_modal');
 const joinName = document.getElementById('join_name');
-const joinEmail = document.getElementById('join_email');
 const joinSeason = document.getElementById('join_season');
 const joinDate = document.getElementById('join_date');
 const joinLikes = document.getElementById('likes_select');
@@ -114,14 +113,41 @@ const profileQuote = localStorage.getItem('quote');
 
 //GENERATE PROFILE FROM JOIN FORM INFO
 function showProfile() {
-    profileArea.innerHTML = `<h1 class="display-5 py-3">Profile</h1>
-                            <p>Name: ${profileName}</p>
-                            <p>Birthday: ${profileSeason} ${profileDay}</p>
-                            <p>Likes: ${profileLikes}</p>
-                            <p>Dislikes: ${profileDislikes}</p>
-                            <p>Loves: ${profileLoves}</p>
-                            <p>Hates: ${profileHates}</p>
-                            <p>Quote: ${profileQuote}</p>`
+    profileArea.innerHTML = `<div class="singles-card card mb-3 rounded-3">
+                            <div class="row g-0">
+                            <div class="col-md-4 text-center ltgrey py-5" style="min-height:297px;">
+                                <img src="img/Krobus.png" class="img-fluid mx-auto d-block photo" alt="${profileName}">
+                                <h5 class="card-title pt-2">${profileName}</h5>
+                                <span class="badge rounded-pill bg-dark">${profileSeason} ${profileDay}</span>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body lead">
+                                <p>“${profileQuote}”</p>
+                                <table class="table table-borderless mb-0 text-center">
+                                    <tr>
+                                    <td><span class="badge p-2 loves">Loves</span></td>
+                                    <td><span class="badge p-2 likes">Likes</span></td>
+                                    <td><span class="badge p-2 dislikes">Dislikes</span></td>
+                                    <td><span class="badge p-2 hates">Hates</span></td>
+                                    </tr>
+                                    <tr>
+                                    <td><img src="img/${profileLoves}.png" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="${profileLoves}"></td>
+                                    <td><img src="img/${profileLikes}t.png" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="${profileLikes}"></td>
+                                    <td><img src="img/${profileDislikes}.png" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="${profileDislikes}"></td>
+                                    <td><img src="img/${profileHates}.png" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="${profileHates}"></td>
+                                    </tr>
+                                </table>
+                                <div class="mt-5">
+                                    <button onclick="signOut()" class="btn btn-secondary mb-0 w-100">Sign out</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>`
 }
 
 
@@ -145,9 +171,13 @@ joinForm.addEventListener('submit', function (e) {
 if (profileName) {
     joinArea.style.display = 'none';
     showProfile();
-} else {    
-    joinArea.style.display = 'block';
+    } else {    
+        joinArea.style.display = 'block';
 }
+
+
+// CLEAR LOCALSTORAGE ("SIGN OUT")
+signOut = () => localStorage.clear();
 
 
 // FILTER SINGLES BY GROUP
