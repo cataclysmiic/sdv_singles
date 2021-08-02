@@ -129,7 +129,8 @@ joinForm.addEventListener('submit', function (e) {
 
 //GENERATE PROFILE FROM JOIN FORM INFO
 function showProfile() {
-    profileArea.innerHTML = `<div class="singles-card card mb-3 rounded-3">
+    profileArea.innerHTML = `<h1 class="display-5 py-3">Join</h1>
+                            <div class="singles-card card mb-3 rounded-3">
                             <div class="row g-0">
                             <div class="col-md-4 text-center ltgrey py-5" style="min-height:297px;">
                                 <img src="img/Krobus.png" class="img-fluid mx-auto d-block photo" alt="${profileName}">
@@ -149,7 +150,7 @@ function showProfile() {
                                     <tr>
                                     <td><img src="img/${profileLoves}.png" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                         title="${profileLoves}"></td>
-                                    <td><img src="img/${profileLikes}t.png" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    <td><img src="img/${profileLikes}.png" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                         title="${profileLikes}"></td>
                                     <td><img src="img/${profileDislikes}.png" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                         title="${profileDislikes}"></td>
@@ -171,8 +172,8 @@ function showProfile() {
 if (profileName) {
     joinArea.style.display = 'none';
     showProfile();
-    } else {    
-        joinArea.style.display = 'block';
+} else {
+    joinArea.style.display = 'block';
 }
 
 
