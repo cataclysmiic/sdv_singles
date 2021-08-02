@@ -116,19 +116,17 @@ joinForm.addEventListener('submit', function (e) {
 });
 
 
-// SAVE JOIN FORM INFO TO LOCALSTORAGE
-const profileName = localStorage.getItem('name');
-const profileSeason = localStorage.getItem('season');
-const profileDay = localStorage.getItem('day');
-const profileLikes = localStorage.getItem('likes');
-const profileDislikes = localStorage.getItem('dislikes');
-const profileLoves = localStorage.getItem('loves');
-const profileHates = localStorage.getItem('hates');
-const profileQuote = localStorage.getItem('quote');
-
-
 //GENERATE PROFILE FROM JOIN FORM INFO
 function showProfile() {
+    // SAVE JOIN FORM INFO TO LOCALSTORAGE
+    const profileName = localStorage.getItem('name');
+    const profileSeason = localStorage.getItem('season');
+    const profileDay = localStorage.getItem('day');
+    const profileLikes = localStorage.getItem('likes');
+    const profileDislikes = localStorage.getItem('dislikes');
+    const profileLoves = localStorage.getItem('loves');
+    const profileHates = localStorage.getItem('hates');
+    const profileQuote = localStorage.getItem('quote');
     profileArea.innerHTML = `<h1 class="display-5 py-3">Join</h1>
                             <div class="singles-card card mb-3 rounded-3">
                             <div class="row g-0">
@@ -169,7 +167,7 @@ function showProfile() {
 
 
 // SHOW JOIN FORM OR PROFILE
-if (profileName) {
+if (localStorage.getItem('name')) {
     joinArea.style.display = 'none';
     showProfile();
 } else {
