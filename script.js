@@ -178,7 +178,11 @@ if (profileName) {
 
 
 // CLEAR LOCALSTORAGE ("SIGN OUT")
-signOut = () => localStorage.clear();
+function signOut() {
+    localStorage.clear();
+    profileArea.style.display = 'none';
+    joinArea.style.display = 'block';
+}
 
 
 // FILTER SINGLES BY GROUP
