@@ -111,6 +111,22 @@ const profileHates = localStorage.getItem('hates');
 const profileQuote = localStorage.getItem('quote');
 
 
+// JOIN FORM BEHAVIOR
+joinForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    localStorage.setItem('name', joinName.value);
+    localStorage.setItem('season', joinSeason.value);
+    localStorage.setItem('day', joinDate.value);
+    localStorage.setItem('likes', joinLikes.value);
+    localStorage.setItem('dislikes', joinDislikes.value);
+    localStorage.setItem('loves', joinLoves.value);
+    localStorage.setItem('hates', joinHates.value);
+    localStorage.setItem('quote', joinQuote.value);
+    joinArea.style.display = 'none';
+    showProfile();
+});
+
+
 //GENERATE PROFILE FROM JOIN FORM INFO
 function showProfile() {
     profileArea.innerHTML = `<div class="singles-card card mb-3 rounded-3">
@@ -148,23 +164,7 @@ function showProfile() {
                             </div>
                             </div>
                         </div>`
-}
-
-
-// JOIN FORM BEHAVIOR
-joinForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    localStorage.setItem('name', joinName.value);
-    localStorage.setItem('season', joinSeason.value);
-    localStorage.setItem('day', joinDate.value);
-    localStorage.setItem('likes', joinLikes.value);
-    localStorage.setItem('dislikes', joinDislikes.value);
-    localStorage.setItem('loves', joinLoves.value);
-    localStorage.setItem('hates', joinHates.value);
-    localStorage.setItem('quote', joinQuote.value);
-    joinArea.style.display = 'none';
-    showProfile();
-});
+};
 
 
 // SHOW JOIN FORM OR PROFILE
